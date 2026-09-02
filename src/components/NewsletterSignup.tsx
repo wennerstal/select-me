@@ -30,19 +30,19 @@ export default function NewsletterSignup() {
       <div className="relative z-10 max-w-md mx-auto text-center text-white">
         <h2 className="text-3xl md:text-4xl font-light mb-3 tracking-wide">Missa aldrig ett släpp</h2>
         <p className="text-sm mb-8 text-white/80">Anmäl dig för nyheter och uppdateringar.</p>
-        <form onSubmit={handleSubmit} className="flex gap-0">
+        <form onSubmit={handleSubmit} className="flex gap-0 rounded-sm overflow-hidden backdrop-blur-md bg-white/20 border border-white/20">
           <input
             type="email"
             required
             placeholder="E-postadress"
             value={email}
             onChange={e => setEmail(e.target.value)}
-            className="flex-1 px-4 py-3 bg-white text-foreground text-sm placeholder:text-muted-foreground focus:outline-none"
+            className="flex-1 px-4 py-3 bg-transparent text-white text-sm placeholder:text-white/70 focus:outline-none"
           />
           <button
             type="submit"
             disabled={isSubmitting}
-            className="px-6 py-3 bg-foreground text-background text-sm font-medium hover:opacity-90 transition-opacity disabled:opacity-50"
+            className="px-6 py-3 bg-white text-black text-sm font-medium hover:bg-white/90 transition-colors disabled:opacity-50"
           >
             {isSubmitting ? "..." : "Anmäl dig"}
           </button>
