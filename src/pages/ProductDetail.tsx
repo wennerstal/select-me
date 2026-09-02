@@ -39,9 +39,10 @@ export default function ProductDetail() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Image */}
-          <div className="w-full aspect-[4/5] bg-warm-bg">
+          <div className="w-full aspect-[4/5] bg-warm-bg rounded-[15px] overflow-hidden">
             <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
           </div>
+
 
           {/* Info */}
           <div className="flex flex-col">

@@ -11,8 +11,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-12">
           <div>
             <h3 className="text-2xl font-light tracking-wide text-foreground mb-3">Select Me</h3>
-            <p className="text-sm text-muted-foreground">Handstickat med omsorg.</p>
             <div className="flex gap-4 mt-6">
+
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <Instagram className="w-[18px] h-[18px] text-muted-foreground hover:text-foreground transition-colors" />
               </a>
