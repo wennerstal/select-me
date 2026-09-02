@@ -1,7 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Instagram } from "lucide-react";
 
 export default function Footer() {
+  const { pathname } = useLocation();
+  const isHome = pathname === "/";
+
   return (
     <footer className="bg-background py-16 px-6">
       <div className="max-w-7xl mx-auto">
