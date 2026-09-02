@@ -1,6 +1,9 @@
-import goldenMistPair from "@/assets/products/golden-mist-pair.jpg";
-import milkDipCup from "@/assets/products/milk-dip-cup.jpg";
-import harvestMoonCup from "@/assets/products/harvest-moon-cup.jpg";
+import goldenMistPairAsset from "@/assets/products/brown-chunky-sweater.jpg.asset.json";
+import milkDipCupAsset from "@/assets/products/fuzzy-taupe-cardigan.jpg.asset.json";
+import harvestMoonCupAsset from "@/assets/products/chocolate-brown-sweater.jpg.asset.json";
+const goldenMistPair = goldenMistPairAsset.url;
+const milkDipCup = milkDipCupAsset.url;
+const harvestMoonCup = harvestMoonCupAsset.url;
 import springBlade from "@/assets/products/spring-blade.jpg";
 import classicSet from "@/assets/products/classic-set.jpg";
 import countryFeastSet from "@/assets/products/country-feast-set.jpg";
@@ -59,18 +62,18 @@ export const products: Product[] = [
   },
   {
     slug: "harvest-moon-cup",
-    name: "Grovstickad pullover",
+    name: "Moka Atelier Ulltröja | Autumn Y26",
     price: 50,
     image: harvestMoonCup,
     availability: "Endast 4 kvar",
-    description: "Vårt kraftigaste plagg — en grovstickad pullover i ett tydligt fiskbensmönster. Gjord av handfärgad ull i vår signaturfärg rost, med sänkta axlar och avslappnad passform.",
+    description: "En mjuk stickad tröja i djup chokladbrun ton med rund halsringning och ribbade muddar. Den avslappnade passformen gör den perfekt att bära övervikt eller nerbäddad i höga byxor.",
   },
   {
     slug: "milk-dip-cup",
-    name: "Kashmirsjal",
+    name: "Nord Fuzz Kofta | Autumn Y26",
     price: 50,
     image: milkDipCup,
-    description: "En oversize sjal stickad i ren mongolisk kashmir i fin slätstickning. Avslutad med en diskret franskant — lika mjuk som den är elegant.",
+    description: "En fluffig kofta i varm taupe med borstad yta och silvriga knappar framtill. Kort, boxig silhuett som matchar lika fint med skinnkjol som med jeans.",
   },
   {
     slug: "salt-spout",
@@ -82,10 +85,10 @@ export const products: Product[] = [
   },
   {
     slug: "golden-mist-pair",
-    name: "Strumpor i lammull, par",
+    name: "Bruna Kolla Grovstickad Tröja | Autumn Y26",
     price: 50,
     image: goldenMistPair,
-    description: "Ett par vadhöga strumpor stickade i borstad lammull med förstärkta hälar och tår. Det ribbade skaftet ger en följsam passform och den mjuka fibern håller fötterna varma hela dagen.",
+    description: "En kraftig, grovstickad tröja i mörkbrun ullmix med breda ärmar och ribbad halsringning. Ett mysigt basplagg som håller värmen genom hela höstsäsongen.",
   },
 ];
 
