@@ -24,7 +24,7 @@ export default function Index() {
       </section>
 
       {/* Featured Products */}
-      <section className="max-w-7xl mx-auto px-6 py-24">
+      <section className="max-w-7xl mx-auto px-6 pt-6 pb-24">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {featuredProducts.map(product => (
             <Link
