@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import { Instagram } from "lucide-react";
-import footerImageAsset from "@/assets/footer-image.jpg.asset.json";
-const footerImage = footerImageAsset.url;
 
 export default function Footer() {
   return (
@@ -16,12 +14,6 @@ export default function Footer() {
                 <Instagram className="w-[18px] h-[18px] text-muted-foreground hover:text-foreground transition-colors" />
               </a>
             </div>
-            <img
-              src={footerImage}
-              alt=""
-              className="w-full max-w-[280px] aspect-[3/4] object-cover mt-8"
-              loading="lazy"
-            />
           </div>
           <div className="flex flex-col gap-3">
             <Link to="/shop" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Butik</Link>
