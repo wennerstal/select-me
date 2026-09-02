@@ -85,10 +85,10 @@ export const products: Product[] = [
   },
   {
     slug: "golden-mist-pair",
-    name: "Strumpor i lammull, par",
+    name: "Bruna Kolla Grovstickad Tröja | Autumn Y26",
     price: 50,
     image: goldenMistPair,
-    description: "Ett par vadhöga strumpor stickade i borstad lammull med förstärkta hälar och tår. Det ribbade skaftet ger en följsam passform och den mjuka fibern håller fötterna varma hela dagen.",
+    description: "En kraftig, grovstickad tröja i mörkbrun ullmix med breda ärmar och ribbad halsringning. Ett mysigt basplagg som håller värmen genom hela höstsäsongen.",
   },
 ];
 
