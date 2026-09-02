@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { ShoppingCart, Menu, X, Instagram } from "lucide-react";
+import { ShoppingCart, Instagram } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
@@ -14,7 +14,6 @@ const navLinks = [
 export default function Header() {
   const { totalItems } = useCart();
   const { pathname } = useLocation();
-  const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const isHome = pathname === "/";
@@ -26,7 +25,7 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const transparent = isHome && !scrolled && !mobileOpen;
+  const transparent = isHome && !scrolled;
 
   return (
     <header
@@ -49,23 +48,25 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map(link => (
-            <Link
-              key={link.to}
-              to={link.to}
-              className={cn(
-                "text-sm uppercase tracking-wider transition-colors",
-                transparent
-                  ? "text-white/80 hover:text-white"
-                  : "text-muted-foreground hover:text-foreground",
-                pathname === link.to && (transparent ? "text-white font-medium" : "text-foreground font-medium")
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+        {!isHome && (
+          <nav className="hidden md:flex items-center gap-8">
+            {navLinks.map(link => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className={cn(
+                  "text-sm uppercase tracking-wider transition-colors",
+                  transparent
+                    ? "text-white/80 hover:text-white"
+                    : "text-muted-foreground hover:text-foreground",
+                  pathname === link.to && (transparent ? "text-white font-medium" : "text-foreground font-medium")
+                )}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        )}
 
         <div className="hidden md:flex items-center gap-5">
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -83,6 +84,9 @@ export default function Header() {
 
         {/* Mobile */}
         <div className="flex md:hidden items-center gap-4">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <Instagram className={cn("w-5 h-5 transition-colors", transparent ? "text-white" : "text-foreground")} />
+          </a>
           <Link to="/cart" className="relative" aria-label="Varukorg">
             <ShoppingCart className={cn("w-5 h-5 transition-colors", transparent ? "text-white" : "text-foreground")} />
             {totalItems > 0 && (
@@ -91,33 +95,8 @@ export default function Header() {
               </span>
             )}
           </Link>
-          <button onClick={() => setMobileOpen(!mobileOpen)} aria-label="Växla meny">
-            {mobileOpen
-              ? <X className={cn("w-6 h-6", transparent ? "text-white" : "text-foreground")} />
-              : <Menu className={cn("w-6 h-6", transparent ? "text-white" : "text-foreground")} />
-            }
-          </button>
         </div>
       </div>
-
-      {/* Mobile menu */}
-      {mobileOpen && (
-        <nav className="md:hidden border-t border-border bg-white px-6 py-6 space-y-4">
-          {navLinks.map(link => (
-            <Link
-              key={link.to}
-              to={link.to}
-              onClick={() => setMobileOpen(false)}
-              className={cn(
-                "block text-sm uppercase tracking-wider text-muted-foreground",
-                pathname === link.to && "text-foreground font-medium"
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-      )}
     </header>
   );
 }
