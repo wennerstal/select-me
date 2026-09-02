@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import footerImageAsset from "@/assets/footer-image.jpg.asset.json";
-const newsletterBg = footerImageAsset.url;
+import newsletterBgAsset from "@/assets/newsletter-bg.jpg.asset.json";
+const newsletterBg = newsletterBgAsset.url;
 
 export default function NewsletterSignup() {
   const { toast } = useToast();
