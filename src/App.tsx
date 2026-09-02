@@ -24,22 +24,21 @@ const App = () => (
       <CartProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route element={<Layout />}>
-              <Route path="/" element={<Index />} />
-              <Route path="/shop" element={<Shop />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              
-              <Route path="/cart" element={<Cart />} />
-              <Route path="/product/:slug" element={<ProductDetail />} />
-              <Route path="/collections/core" element={<CoreCollection />} />
-              <Route path="/collections/sets-and-pairs" element={<SetsAndPairs />} />
-            </Route>
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
+        <BrowserRouter basename="/select-me">
+  <Routes>
+    <Route element={<Layout />}>
+      <Route path="/" element={<Index />} />
+      <Route path="/shop" element={<Shop />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/product/:slug" element={<ProductDetail />} />
+      <Route path="/collections/core" element={<CoreCollection />} />
+      <Route path="/collections/sets-and-pairs" element={<SetsAndPairs />} />
+    </Route>
+    <Route path="*" element={<NotFound />} />
+  </Routes>
+</BrowserRouter>
       </CartProvider>
     </TooltipProvider>
   </QueryClientProvider>
