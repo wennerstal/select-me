@@ -26,7 +26,7 @@ export default function CoreCollection() {
           Rotad i hantverk, gjord för att hålla.
         </h2>
         <p className="text-base leading-relaxed text-gray-700 mb-6">
-          Baskollektionen är grunden i Terra Studios — vardagsstickat format för stilla rutiner. Varje plagg är handstickat av ansvarsfullt framtagna naturgarner och avslutat i vår karakteristiska jordnära palett som enkelt låter sig lagras året om.
+          Baskollektionen är grunden i select me. — vardagsstickat format för stilla rutiner. Varje plagg är handstickat av ansvarsfullt framtagna naturgarner och avslutat i vår karakteristiska jordnära palett som enkelt låter sig lagras året om.
         </p>
         <p className="text-base leading-relaxed text-gray-700">
           Inspirerade av naturens texturer hyllar dessa plagg det ofullkomligas skönhet. Inga två plagg är identiska — de små variationerna i spänning, maska och färg är det som gör varje plagg omisskännligt handgjort.
