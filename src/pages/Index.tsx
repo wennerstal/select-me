@@ -32,7 +32,7 @@ export default function Index() {
               to={`/product/${product.slug}`}
               className="group block"
             >
-              <div className="bg-[hsl(var(--warm-bg))] aspect-square overflow-hidden mb-4">
+              <div className="bg-[hsl(var(--warm-bg))] aspect-square overflow-hidden mb-4 rounded-[15px]">
                 <img
                   src={product.image}
                   alt={product.name}
@@ -40,6 +40,7 @@ export default function Index() {
                   loading="lazy"
                 />
               </div>
+
               <h3 className="text-base font-light text-foreground mb-1">{product.name}</h3>
               <p className="text-sm text-muted-foreground">${product.price.toFixed(2)}</p>
             </Link>
@@ -76,9 +77,10 @@ export default function Index() {
       </section>
 
       {/* Newsletter */}
-      <div className="mt-12">
+      <div className="mt-12 hidden">
         <NewsletterSignup />
       </div>
+
     </>
   );
 }

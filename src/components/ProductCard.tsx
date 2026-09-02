@@ -4,7 +4,7 @@ import type { Product } from "@/data/products";
 export default function ProductCard({ product }: { product: Product }) {
   return (
     <Link to={`/product/${product.slug}`} className="group relative block">
-      <div className="relative overflow-hidden bg-[hsl(var(--warm-bg))]">
+      <div className="relative overflow-hidden bg-[hsl(var(--warm-bg))] rounded-[15px]">
         <img
           src={product.image}
           alt={product.name}
@@ -12,6 +12,7 @@ export default function ProductCard({ product }: { product: Product }) {
           loading="lazy"
         />
       </div>
+
       <div className="mt-4">
         <div className="flex items-baseline justify-between gap-2">
           <h3 className="text-base font-medium text-foreground">{product.name}</h3>
