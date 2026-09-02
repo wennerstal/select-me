@@ -40,11 +40,11 @@ export default function Header() {
         <Link
           to="/"
           className={cn(
-            "text-2xl font-light tracking-wide transition-colors",
+            "text-2xl font-normal tracking-wide transition-colors",
             transparent ? "text-white" : "text-foreground"
           )}
         >
-          Select Me
+          select me.
         </Link>
 
         {/* Desktop nav */}
