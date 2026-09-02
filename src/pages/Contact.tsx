@@ -12,8 +12,8 @@ export default function Contact() {
     setIsSubmitting(true);
     await new Promise(resolve => setTimeout(resolve, 1000));
     toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. We'll get back to you within 24 hours.",
+      title: "Meddelandet är skickat!",
+      description: "Tack för att du hörde av dig. Vi återkommer inom 24 timmar.",
     });
     setForm({ firstName: "", lastName: "", email: "", subject: "", message: "" });
     setIsSubmitting(false);
@@ -33,10 +33,10 @@ export default function Contact() {
           {/* Left — Info */}
           <div>
             <h1 className="text-4xl md:text-5xl font-light text-foreground mb-8 leading-tight">
-              Get in touch.
+              Hör av dig.
             </h1>
             <p className="text-sm leading-relaxed text-muted-foreground mb-10">
-              We'd love to hear from you — whether you have a question about our knitwear, need help with an order, or want to discuss a custom commission. Our small team typically responds within one business day.
+              Vi hör gärna från dig — oavsett om du har en fråga om våra stickade plagg, behöver hjälp med en beställning eller vill diskutera ett specialbeställt arbete. Vårt lilla team svarar oftast inom en arbetsdag.
             </p>
             <div className="space-y-1">
               <p className="text-lg text-foreground font-medium">
@@ -50,36 +50,36 @@ export default function Contact() {
 
           {/* Right — Form */}
           <form onSubmit={handleSubmit} className="space-y-6">
-            <p className="text-sm font-medium text-foreground mb-2">Name</p>
+            <p className="text-sm font-medium text-foreground mb-2">Namn</p>
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label htmlFor="firstName" className={labelClass}>
-                  First Name<span className={requiredClass}>(required)</span>
+                  Förnamn<span className={requiredClass}>(obligatoriskt)</span>
                 </label>
                 <input id="firstName" required value={form.firstName} onChange={update("firstName")} className={inputClass} />
               </div>
               <div>
                 <label htmlFor="lastName" className={labelClass}>
-                  Last Name<span className={requiredClass}>(required)</span>
+                  Efternamn<span className={requiredClass}>(obligatoriskt)</span>
                 </label>
                 <input id="lastName" required value={form.lastName} onChange={update("lastName")} className={inputClass} />
               </div>
             </div>
             <div>
               <label htmlFor="email" className={labelClass}>
-                Email<span className={requiredClass}>(required)</span>
+                E-post<span className={requiredClass}>(obligatoriskt)</span>
               </label>
               <input id="email" required type="email" value={form.email} onChange={update("email")} className={inputClass} />
             </div>
             <div>
               <label htmlFor="subject" className={labelClass}>
-                Subject<span className={requiredClass}>(required)</span>
+                Ämne<span className={requiredClass}>(obligatoriskt)</span>
               </label>
               <input id="subject" required value={form.subject} onChange={update("subject")} className={inputClass} />
             </div>
             <div>
               <label htmlFor="message" className={labelClass}>
-                Message<span className={requiredClass}>(required)</span>
+                Meddelande<span className={requiredClass}>(obligatoriskt)</span>
               </label>
               <textarea id="message" required value={form.message} onChange={update("message")} className={`${inputClass} h-28 resize-vertical`} />
             </div>
@@ -88,7 +88,7 @@ export default function Contact() {
               disabled={isSubmitting}
               className="px-8 py-3 bg-accent text-accent-foreground text-sm font-medium hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? "Sending..." : "Submit"}
+              {isSubmitting ? "Skickar..." : "Skicka"}
             </button>
           </form>
         </div>
