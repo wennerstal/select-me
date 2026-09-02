@@ -15,7 +15,7 @@ export default function Index() {
         <div className="absolute inset-0 bg-[hsl(30_30%_22%/0.3)]" />
         <div className="absolute bottom-0 left-0 right-0 px-6 pb-16 md:pb-20">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white tracking-wide max-w-7xl mx-auto leading-none">
-            Ny kollektion
+            Autumn Y26
           </h1>
         </div>
       </section>
@@ -24,7 +24,7 @@ export default function Index() {
       <section className="max-w-7xl mx-auto px-6 py-24">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 items-start">
         <h2 className="text-3xl md:text-4xl font-light text-foreground leading-snug">
-            Handstickat för alla årstider.
+            Höstens utvalda kollektion.
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {featuredProducts.map(product => (
