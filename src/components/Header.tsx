@@ -49,23 +49,25 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map(link => (
-            <Link
-              key={link.to}
-              to={link.to}
-              className={cn(
-                "text-sm uppercase tracking-wider transition-colors",
-                transparent
-                  ? "text-white/80 hover:text-white"
-                  : "text-muted-foreground hover:text-foreground",
-                pathname === link.to && (transparent ? "text-white font-medium" : "text-foreground font-medium")
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+        {!isHome && (
+          <nav className="hidden md:flex items-center gap-8">
+            {navLinks.map(link => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className={cn(
+                  "text-sm uppercase tracking-wider transition-colors",
+                  transparent
+                    ? "text-white/80 hover:text-white"
+                    : "text-muted-foreground hover:text-foreground",
+                  pathname === link.to && (transparent ? "text-white font-medium" : "text-foreground font-medium")
+                )}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        )}
 
         <div className="hidden md:flex items-center gap-5">
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
