@@ -9,13 +9,13 @@ export default function Cart() {
   if (items.length === 0) {
     return (
       <div className="max-w-6xl mx-auto px-6 py-24">
-        <h1 className="text-2xl font-medium text-foreground mb-4">Shopping Cart</h1>
-        <p className="text-sm text-foreground mb-8">You have nothing in your shopping cart.</p>
+        <h1 className="text-2xl font-medium text-foreground mb-4">Varukorg</h1>
+        <p className="text-sm text-foreground mb-8">Din varukorg är tom.</p>
         <Link
           to="/shop"
           className="inline-block px-8 py-4 bg-accent text-accent-foreground text-sm font-medium hover:opacity-90 transition-opacity"
         >
-          Continue Shopping
+          Fortsätt handla
         </Link>
       </div>
     );
@@ -23,7 +23,7 @@ export default function Cart() {
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-24">
-      <h1 className="text-2xl font-medium text-foreground mb-12">Shopping Cart</h1>
+      <h1 className="text-2xl font-medium text-foreground mb-12">Varukorg</h1>
       <div className="space-y-8">
         {items.map(item => (
           <div key={item.slug} className="flex gap-6 border-b border-border pb-8">
@@ -34,7 +34,7 @@ export default function Cart() {
                   <h3 className="text-base font-medium text-foreground">{item.name}</h3>
                   <p className="text-sm text-muted-foreground">${item.price.toFixed(2)}</p>
                 </div>
-                <button onClick={() => removeItem(item.slug)} aria-label="Remove item">
+                <button onClick={() => removeItem(item.slug)} aria-label="Ta bort vara">
                   <X className="w-5 h-5 text-muted-foreground hover:text-foreground transition-colors" />
                 </button>
               </div>
@@ -46,9 +46,9 @@ export default function Cart() {
         ))}
       </div>
       <div className="mt-12 flex flex-col items-end gap-4">
-        <p className="text-lg text-foreground">Subtotal: <span className="font-medium">${subtotal.toFixed(2)}</span></p>
+        <p className="text-lg text-foreground">Delsumma: <span className="font-medium">${subtotal.toFixed(2)}</span></p>
         <button className="px-8 py-4 bg-accent text-accent-foreground text-sm font-medium hover:opacity-90 transition-opacity">
-          Checkout
+          Till kassan
         </button>
       </div>
     </div>
