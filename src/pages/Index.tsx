@@ -15,37 +15,35 @@ export default function Index() {
         <div className="absolute inset-0 bg-[hsl(30_30%_22%/0.3)]" />
         <div className="absolute bottom-0 left-0 right-0 px-6 pb-16 md:pb-20">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white tracking-wide max-w-7xl mx-auto leading-none">
-            Autumn Y26
+            Autumn Y26
           </h1>
+          <p className="mt-4 text-sm md:text-base text-white/70 tracking-wide max-w-7xl mx-auto">
+            Höstens kollektion av utvalda plagg.
+          </p>
         </div>
       </section>
 
-      {/* Featured Products — side-by-side layout */}
+      {/* Featured Products */}
       <section className="max-w-7xl mx-auto px-6 py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 items-start">
-        <h2 className="text-3xl md:text-4xl font-light text-foreground leading-snug">
-            Höstens utvalda kollektion.
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {featuredProducts.map(product => (
-              <Link
-                key={product.slug}
-                to={`/product/${product.slug}`}
-                className="group block"
-              >
-                <div className="bg-[hsl(var(--warm-bg))] aspect-square overflow-hidden mb-4">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 className="text-base font-light text-foreground mb-1">{product.name}</h3>
-                <p className="text-sm text-muted-foreground">${product.price.toFixed(2)}</p>
-              </Link>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {featuredProducts.map(product => (
+            <Link
+              key={product.slug}
+              to={`/product/${product.slug}`}
+              className="group block"
+            >
+              <div className="bg-[hsl(var(--warm-bg))] aspect-square overflow-hidden mb-4">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <h3 className="text-base font-light text-foreground mb-1">{product.name}</h3>
+              <p className="text-sm text-muted-foreground">${product.price.toFixed(2)}</p>
+            </Link>
+          ))}
         </div>
       </section>
 
