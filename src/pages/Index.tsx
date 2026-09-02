@@ -10,11 +10,11 @@ export default function Index() {
     <>
       {/* Hero — full bleed, header overlays this */}
       <section className="w-full h-[70vh] relative -mt-[72px]">
-        <img src={heroBg} alt="Handcrafted artisan knitwear" className="w-full h-full object-cover" />
+        <img src={heroBg} alt="Handstickat hantverk" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-[hsl(30_30%_22%/0.3)]" />
         <div className="absolute bottom-0 left-0 right-0 px-6 pb-16 md:pb-20">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white tracking-wide max-w-7xl mx-auto leading-none">
-            New Collection
+            Ny kollektion
           </h1>
         </div>
       </section>
@@ -23,7 +23,7 @@ export default function Index() {
       <section className="max-w-7xl mx-auto px-6 py-24">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 items-start">
         <h2 className="text-3xl md:text-4xl font-light text-foreground leading-snug">
-            Handcrafted knitwear for every season.
+            Handstickat för alla årstider.
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {featuredProducts.map(product => (
@@ -54,23 +54,23 @@ export default function Index() {
           <Link to="/collections/core" className="relative overflow-hidden group block">
             <img
               src={coreCollection}
-              alt="The Core Collection"
+              alt="Baskollektionen"
               className="w-full aspect-[4/5] object-cover transition-transform duration-700 group-hover:scale-[1.03]"
             />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-500 flex flex-col justify-between p-8">
-              <span className="text-sm uppercase tracking-widest text-white/80">Explore</span>
-              <h3 className="text-2xl md:text-3xl font-light text-white">The Core Collection</h3>
+              <span className="text-sm uppercase tracking-widest text-white/80">Utforska</span>
+              <h3 className="text-2xl md:text-3xl font-light text-white">Baskollektionen</h3>
             </div>
           </Link>
           <Link to="/collections/sets-and-pairs" className="relative overflow-hidden group block">
             <img
               src={setsAndPairs}
-              alt="Sets and Pairs"
+              alt="Set och par"
               className="w-full aspect-[4/5] object-cover transition-transform duration-700 group-hover:scale-[1.03]"
             />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-500 flex flex-col justify-between p-8">
-              <span className="text-sm uppercase tracking-widest text-white/80">Start Fresh</span>
-              <h3 className="text-2xl md:text-3xl font-light text-white">Sets and Pairs</h3>
+              <span className="text-sm uppercase tracking-widest text-white/80">Börja om</span>
+              <h3 className="text-2xl md:text-3xl font-light text-white">Set och par</h3>
             </div>
           </Link>
         </div>

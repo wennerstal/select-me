@@ -22,8 +22,8 @@ export default function ProductDetail() {
     if (isSoldOut) return;
     addItem({ slug: product.slug, name: product.name, price: product.price, image: product.image }, quantity);
     toast({
-      title: "Added to cart",
-      description: `${quantity}× ${product.name} added to your cart.`,
+      title: "Tillagd i varukorgen",
+      description: `${quantity}× ${product.name} har lagts i din varukorg.`,
     });
     setQuantity(1);
   };
@@ -32,7 +32,7 @@ export default function ProductDetail() {
     <>
       <section className="max-w-6xl mx-auto px-6 py-8">
         <nav className="text-sm text-muted-foreground mb-6">
-          <Link to="/shop" className="hover:text-foreground transition-colors">Shop</Link>
+          <Link to="/shop" className="hover:text-foreground transition-colors">Butik</Link>
           <span className="mx-2">›</span>
           <span className="text-foreground">{product.name}</span>
         </nav>
@@ -59,7 +59,7 @@ export default function ProductDetail() {
                   onClick={handleAddToCart}
                   className="flex-1 py-3 bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
                 >
-                  Add To Cart
+                  Lägg i varukorg
                 </button>
               </div>
             ) : (
@@ -67,7 +67,7 @@ export default function ProductDetail() {
                 disabled
                 className="w-full py-3 bg-muted text-muted-foreground text-sm font-medium cursor-not-allowed"
               >
-                Sold Out
+                Slutsåld
               </button>
             )}
           </div>
@@ -76,7 +76,7 @@ export default function ProductDetail() {
 
       {related.length > 0 && (
         <section className="max-w-6xl mx-auto px-6 py-16">
-          <h2 className="text-2xl font-light text-foreground mb-8">You Might Also Like</h2>
+          <h2 className="text-2xl font-light text-foreground mb-8">Du kanske också gillar</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {related.map(p => (
               <ProductCard key={p.slug} product={p} />

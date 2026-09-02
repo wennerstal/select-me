@@ -11,11 +11,11 @@ export default function SetsAndPairs() {
     <>
       {/* Hero */}
       <section className="relative w-full h-[60vh]">
-        <img src={setsImg} alt="Sets and Pairs" className="w-full h-full object-cover" />
+        <img src={setsImg} alt="Set och par" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
           <div className="text-center text-white">
-            <p className="text-sm uppercase tracking-widest mb-3">Start Fresh</p>
-            <h1 className="text-4xl md:text-5xl font-light">Sets and Pairs</h1>
+            <p className="text-sm uppercase tracking-widest mb-3">Börja om</p>
+            <h1 className="text-4xl md:text-5xl font-light">Set och par</h1>
           </div>
         </div>
       </section>
@@ -23,13 +23,13 @@ export default function SetsAndPairs() {
       {/* Story */}
       <section className="max-w-3xl mx-auto px-6 py-16 text-center">
         <h2 className="text-2xl md:text-3xl font-light text-gray-900 mb-6">
-          Better together.
+          Bättre tillsammans.
         </h2>
         <p className="text-base leading-relaxed text-gray-700 mb-6">
-          Our curated sets and pairs are designed to work in harmony — matched yarns, complementary textures, and coordinated tones that bring cohesion to your wardrobe. Whether you're layering for yourself or gifting to someone special, these groupings take the guesswork out of styling.
+          Våra utvalda set och par är formgivna för att samspela — matchade garner, kompletterande texturer och samstämda toner som skapar helhet i garderoben. Oavsett om du lagrar plagg för din egen del eller ger bort dem i present tar dessa kombinationer bort gissandet ur stylingen.
         </p>
         <p className="text-base leading-relaxed text-gray-700">
-          Each set is thoughtfully composed to balance warmth and form. Mix within a set or combine across collections — the earthy palette ensures everything works beautifully together.
+          Varje set är omsorgsfullt sammansatt för att balansera värme och form. Blanda inom ett set eller kombinera över kollektionerna — den jordnära paletten gör att allt fungerar vackert ihop.
         </p>
       </section>
 
@@ -45,11 +45,11 @@ export default function SetsAndPairs() {
       {/* Gift note */}
       <section className="bg-gray-50 py-16 px-6">
         <div className="max-w-xl mx-auto text-center">
-          <h2 className="text-2xl font-light text-gray-900 mb-4">The Perfect Gift</h2>
+          <h2 className="text-2xl font-light text-gray-900 mb-4">Den perfekta presenten</h2>
           <p className="text-base text-gray-700 leading-relaxed mb-6">
-            Every set ships in our custom gift packaging — tissue-wrapped and nestled in a recycled kraft box. Add a handwritten note at checkout to make it personal.
+            Varje set skickas i vår egen presentförpackning — inslaget i silkespapper och nedbäddat i en låda av återvunnet kraftpapper. Lägg till en handskriven hälsning i kassan för en personlig touch.
           </p>
-          <p className="text-sm text-gray-500 uppercase tracking-wider">Free shipping on all sets</p>
+          <p className="text-sm text-gray-500 uppercase tracking-wider">Fri frakt på alla set</p>
         </div>
       </section>
     </>

@@ -16,10 +16,10 @@ export default function ProductCard({ product }: { product: Product }) {
         <div className="flex items-baseline justify-between gap-2">
           <h3 className="text-base font-medium text-foreground">{product.name}</h3>
           {product.badge === "sale" && (
-            <span className="text-xs text-accent font-medium">Sale</span>
+            <span className="text-xs text-accent font-medium">Rea</span>
           )}
           {product.badge === "sold-out" && (
-            <span className="text-xs text-accent font-medium">Sold out</span>
+            <span className="text-xs text-accent font-medium">Slutsåld</span>
           )}
           {product.availability && (
             <span className="text-xs text-muted-foreground ml-auto">{product.availability}</span>

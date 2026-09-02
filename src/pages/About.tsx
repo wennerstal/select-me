@@ -5,16 +5,16 @@ export default function About() {
     <article className="max-w-3xl mx-auto px-6 pt-8 pb-32">
       {/* Headline */}
       <h1 className="text-4xl md:text-5xl font-light text-foreground mb-16 leading-tight">
-        An exploration in fiber and form.
+        En utforskning av fiber och form.
       </h1>
 
       {/* First text block */}
       <div className="space-y-6 text-sm leading-relaxed text-muted-foreground mb-24">
         <p>
-          Terra Studios began with a simple conviction: that the clothes we wear should carry the warmth of the hands that made them. Every piece in our collection is hand-knitted from natural fibers — merino, alpaca, cashmere, and heritage breed wools — sourced from small farms and independent spinners who share our commitment to ethical, sustainable practice.
+          Terra Studios började med en enkel övertygelse: att kläderna vi bär ska bära värmen från händerna som gjorde dem. Varje plagg i vår kollektion är handstickat av naturliga fibrer — merino, alpacka, kashmir och ull från bevarandeviktiga fårraser — från små gårdar och fristående spinnerier som delar vårt engagemang för etiskt och hållbart hantverk.
         </p>
         <p>
-          Our process is slow by design. Each garment begins as a skein of yarn, carefully wound and paired with a pattern developed in-house. From there, skilled artisans work stitch by stitch, shaping fabric that moves and breathes with the body. The result is knitwear with a depth of texture and character that no machine can replicate — pieces that age gracefully, soften over time, and become more personal with every wear.
+          Vår process är långsam med flit. Varje plagg börjar som en garnhärva, omsorgsfullt nystad och parad med ett mönster framtaget i egen regi. Därifrån arbetar skickliga hantverkare maska för maska och formar ett tyg som rör sig och andas med kroppen. Resultatet är stickat med ett djup i textur och karaktär som ingen maskin kan återskapa — plagg som åldras vackert, mjuknar med tiden och blir mer personliga för varje gång de bärs.
         </p>
       </div>
 
@@ -22,7 +22,7 @@ export default function About() {
       <div className="w-full mb-24">
         <img
           src={aboutBg}
-          alt="Artisan knitting natural wool with wooden needles"
+          alt="Hantverkare som stickar naturull med trästickor"
           className="w-full h-auto object-cover"
         />
       </div>
@@ -30,16 +30,16 @@ export default function About() {
       {/* Second text block */}
       <div className="space-y-6 text-sm leading-relaxed text-muted-foreground mb-16">
         <p>
-          We work exclusively with natural, undyed and plant-dyed yarns, embracing the subtle tonal variations that come from the fleece itself. Our earth-toned palette — sand, oatmeal, rust, charcoal, moss — reflects the landscapes that inspire us: windswept coastlines, autumn moorlands, and the quiet beauty of the countryside in every season.
+          Vi arbetar uteslutande med naturliga, ofärgade och växtfärgade garner och omfamnar de subtila nyansskiftningar som kommer från ullen själv. Vår jordnära palett — sand, havre, rost, koks och mossa — speglar de landskap som inspirerar oss: vindpinade kuster, höstliga hedar och landsbygdens stilla skönhet under alla årstider.
         </p>
         <p>
-          Each collection is released in small batches, and many pieces are made to order. We believe in making less and making it well. When you wear Terra Studios, you carry with you the rhythm of the needles, the texture of the yarn, and the intention of a maker who cared about every single stitch.
+          Varje kollektion släpps i små serier och många plagg tillverkas på beställning. Vi tror på att göra mindre och göra det väl. När du bär Terra Studios bär du med dig stickornas rytm, garnets textur och omtanken från en hantverkare som brydde sig om varenda maska.
         </p>
       </div>
 
       {/* Attribution */}
       <p className="text-sm text-muted-foreground">
-        Knitwear by Terra Studios
+        Stickat av Terra Studios
       </p>
     </article>
   );
