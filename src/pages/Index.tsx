@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import heroBgAsset from "@/assets/uploaded-hero.jpg.asset.json";
+import heroBgAsset from "@/assets/hero-image.jpg.asset.json";
 const heroBg = heroBgAsset.url;
 import coreCollection from "@/assets/collections/core-collection.jpg";
 import setsAndPairs from "@/assets/collections/sets-and-pairs.jpg";
