@@ -45,7 +45,7 @@ export default function Header() {
             transparent ? "text-white" : "text-foreground"
           )}
         >
-          Terra Studios
+          Select Me
         </Link>
 
         {/* Desktop nav */}
