@@ -50,7 +50,7 @@ export default function Index() {
       </section>
 
       {/* Collections — tight gap, polished overlays */}
-      <section className="max-w-7xl mx-auto px-6 py-12">
+      <section className="max-w-7xl mx-auto px-6 py-12 hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           <Link to="/collections/core" className="relative overflow-hidden group block">
             <img
