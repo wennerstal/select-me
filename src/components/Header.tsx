@@ -14,7 +14,6 @@ const navLinks = [
 export default function Header() {
   const { totalItems } = useCart();
   const { pathname } = useLocation();
-  const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const isHome = pathname === "/";
@@ -26,7 +25,7 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const transparent = isHome && !scrolled && !mobileOpen;
+  const transparent = isHome && !scrolled;
 
   return (
     <header
