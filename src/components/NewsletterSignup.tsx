@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import newsletterBg from "@/assets/newsletter-bg.jpg";
+import footerImageAsset from "@/assets/footer-image.jpg.asset.json";
+const newsletterBg = footerImageAsset.url;
 
 export default function NewsletterSignup() {
   const { toast } = useToast();
@@ -27,7 +28,7 @@ export default function NewsletterSignup() {
     >
       <div className="absolute inset-0 bg-foreground/40" />
       <div className="relative z-10 max-w-md mx-auto text-center text-white">
-        <h2 className="text-3xl md:text-4xl font-light mb-3 tracking-wide">Månadsbrevet</h2>
+        <h2 className="text-3xl md:text-4xl font-light mb-3 tracking-wide">Missa aldrig ett släpp</h2>
         <p className="text-sm mb-8 text-white/80">Anmäl dig för nyheter och uppdateringar.</p>
         <form onSubmit={handleSubmit} className="flex gap-0">
           <input
@@ -41,7 +42,7 @@ export default function NewsletterSignup() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="px-6 py-3 bg-accent text-accent-foreground text-sm font-medium hover:opacity-90 transition-opacity disabled:opacity-50"
+            className="px-6 py-3 bg-foreground text-background text-sm font-medium hover:opacity-90 transition-opacity disabled:opacity-50"
           >
             {isSubmitting ? "..." : "Anmäl dig"}
           </button>
