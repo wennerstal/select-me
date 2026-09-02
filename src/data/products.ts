@@ -62,18 +62,18 @@ export const products: Product[] = [
   },
   {
     slug: "harvest-moon-cup",
-    name: "Grovstickad pullover",
+    name: "Moka Atelier Ulltröja | Autumn Y26",
     price: 50,
     image: harvestMoonCup,
     availability: "Endast 4 kvar",
-    description: "Vårt kraftigaste plagg — en grovstickad pullover i ett tydligt fiskbensmönster. Gjord av handfärgad ull i vår signaturfärg rost, med sänkta axlar och avslappnad passform.",
+    description: "En mjuk stickad tröja i djup chokladbrun ton med rund halsringning och ribbade muddar. Den avslappnade passformen gör den perfekt att bära övervikt eller nerbäddad i höga byxor.",
   },
   {
     slug: "milk-dip-cup",
-    name: "Kashmirsjal",
+    name: "Nord Fuzz Kofta | Autumn Y26",
     price: 50,
     image: milkDipCup,
-    description: "En oversize sjal stickad i ren mongolisk kashmir i fin slätstickning. Avslutad med en diskret franskant — lika mjuk som den är elegant.",
+    description: "En fluffig kofta i varm taupe med borstad yta och silvriga knappar framtill. Kort, boxig silhuett som matchar lika fint med skinnkjol som med jeans.",
   },
   {
     slug: "salt-spout",
